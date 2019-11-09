@@ -14,7 +14,7 @@
   --navbar_len: 14%; /* these two must add up to 100% */
   --width:      86%; 
   /* other globals */
-  --prof: 10rem;
+  --prof: 1rem;
   --down: 7rem;
 }
 
@@ -68,17 +68,21 @@ canvas{
   font-size: 1.1em;
 }
 
+/*
 #stats,
 .count-particles{
   -webkit-user-select: none;
   margin-top: 5px;
   margin-left: 5px;
 }
+*/
 
 #stats{
   border-radius: 3px 3px 0 0;
   overflow: hidden;
+  display: none;
 }
+
 
 .count-particles{
   border-radius: 0 0 3px 3px;
@@ -103,6 +107,11 @@ canvas{
   width:  var(--prof);
   height: var(--prof);
   z-index: 100;
+}
+
+
+#first { /* in addition to scss of 3rem */
+  padding: 1rem !important;
 }
 
 .title {
@@ -220,6 +229,7 @@ p.lead {
     flex-direction: column;
     width: var(--navbar_len);
     height: 100vh;
+/*    z-index: -1; */
   }
   #sideNav .navbar-brand {
     display: -webkit-box;
@@ -229,9 +239,11 @@ p.lead {
     padding: 0.5rem;
   }
   #sideNav .navbar-brand .img-profile {
-    max-width: 10rem;
-    max-height: 10rem;
-    border: 0.5rem solid rgba(255, 255, 255, 0.2);
+    max-width: 4%
+    max-height: 4%;
+    width: auto;
+    height: auto;
+    border: .5rem solid rgba(255, 255, 255, 0.2);
   }
   #sideNav .navbar-collapse {
     display: -webkit-box;
